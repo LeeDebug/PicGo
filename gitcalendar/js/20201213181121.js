@@ -3,7 +3,7 @@ const calendar = new Vue({
   data: {
     // 打开时使用canvas绘制gitcalendar，关闭时使用svg绘制gitcalendar
 	  // canvas：dom数少，但图像会发生模糊，自适应一般  svg：dom数多，图像清晰，自适应更佳  
-    simplemode: true,
+    simplemode: false,
     // 这里填写你的github用户名
     user: 'LeeDebug',
     fixed: 'fixed',
@@ -57,14 +57,14 @@ const calendar = new Vue({
     thiscolor(x) {
       if (x === 0) {
         let i = parseInt(x / 2);
-        return this.color[0]
+        return this.green[0]
       } else if (x < 2) {
-        return this.color[1]
+        return this.green[1]
       } else if (x < 20) {
         let i = parseInt(x / 2);
-        return this.color[i]
+        return this.green[i]
       } else {
-        return this.color[9]
+        return this.green[9]
       }
     },
   }
