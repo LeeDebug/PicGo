@@ -4,7 +4,7 @@ const calendar = new Vue({
     simplemode: true, //打开时使用canvas绘制gitcalendar，关闭时使用svg绘制gitcalendar
 	                  //canvas：dom数少，但图像会发生模糊，自适应一般  svg：dom数多，图像清晰，自适应更佳  
 	                  
-    user: 'Zfour', //这里填写你的github用户名
+    user: 'LeeDebug', //这里填写你的github用户名
     
 	fixed: 'fixed',
     px: 'px',
@@ -71,6 +71,7 @@ const calendar = new Vue({
 });
 let githubapiurl = "https://githubapi.ryanchristian.dev/user/" + calendar.user;
 $(function () {
+  console.log('cdn js file load success~');
   $.ajax({
     type: "GET",
     url: githubapiurl,
